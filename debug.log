@@ -1,0 +1,131 @@
+[2020-11-30 15:01:16] INFO [django.server:154] "GET / HTTP/1.1" 200 10556
+[2020-11-30 15:01:16] INFO [django.server:154] "GET /static/font/index/icomoon/style.css HTTP/1.1" 200 79820
+[2020-11-30 15:01:16] INFO [django.server:154] "GET /static/css/index/style.css HTTP/1.1" 200 26926
+[2020-11-30 15:01:16] INFO [django.server:154] "GET /static/css/index/bootstrap.min.css HTTP/1.1" 200 229778
+[2020-11-30 15:01:16] INFO [django.server:154] "GET /static/js/index/jquery.sticky.js HTTP/1.1" 200 10084
+[2020-11-30 15:01:16] INFO [django.server:154] "GET /static/js/index/jquery-3.3.1.min.js HTTP/1.1" 200 146411
+[2020-11-30 15:01:16] INFO [django.server:154] "GET /static/js/users/browserCheck.js HTTP/1.1" 200 360
+[2020-11-30 15:01:16] INFO [django.server:154] "GET /static/js/index/main.js HTTP/1.1" 200 8085
+[2020-11-30 15:01:16] INFO [django.server:154] "GET /static/js/index/owl.carousel.min.js HTTP/1.1" 200 58206
+[2020-11-30 15:01:16] INFO [django.server:154] "GET /static/js/index/aos.js HTTP/1.1" 200 14244
+[2020-11-30 15:01:16] WARNING [django.request:228] Not Found: /img/logo1.jpg
+[2020-11-30 15:01:16] WARNING [django.server:154] "GET /img/logo1.jpg HTTP/1.1" 404 2397
+[2020-11-30 15:01:16] INFO [django.server:154] "GET /static/font/index/icomoon/fonts/icomoon.ttf?10si43 HTTP/1.1" 200 307168
+[2020-11-30 15:01:16] WARNING [django.request:228] Not Found: /favicon.ico
+[2020-11-30 15:01:16] WARNING [django.server:154] "GET /favicon.ico HTTP/1.1" 404 2391
+[2020-11-30 15:01:21] INFO [django.server:154] "GET /users/login/ HTTP/1.1" 200 5270
+[2020-11-30 15:01:21] INFO [django.server:154] "GET /static/css/users/checkbox.css HTTP/1.1" 200 6661
+[2020-11-30 15:01:27] ERROR [django.request:228] Internal Server Error: /users/agreement/
+Traceback (most recent call last):
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\backends\sqlite3\base.py", line 298, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\deprecation.py", line 93, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\contrib\sessions\middleware.py", line 58, in process_response
+    request.session.save()
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\contrib\sessions\backends\db.py", line 81, in save
+    return self.create()
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\contrib\sessions\backends\db.py", line 51, in create
+    self._session_key = self._get_new_session_key()
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\contrib\sessions\backends\base.py", line 153, in _get_new_session_key
+    if not self.exists(session_key):
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\contrib\sessions\backends\db.py", line 47, in exists
+    return self.model.objects.filter(session_key=session_key).exists()
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 718, in exists
+    return self.query.has_results(using=self.db)
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\query.py", line 516, in has_results
+    return compiler.has_results()
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 1035, in has_results
+    return bool(self.execute_sql(SINGLE))
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 1065, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\backends\sqlite3\base.py", line 298, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: django_session
+[2020-11-30 15:01:27] ERROR [django.server:154] "GET /users/agreement/ HTTP/1.1" 500 144017
+[2020-11-30 15:01:37] ERROR [django.request:228] Internal Server Error: /users/login/
+Traceback (most recent call last):
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\backends\sqlite3\base.py", line 298, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: 회원목록
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\sos13\OneDrive\바탕 화면\project1-master\project1-master\FOCUS\project\users\decorators.py", line 36, in wrap
+    return function(request, *args, **kwargs)
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\edit.py", line 141, in post
+    if form.is_valid():
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\forms\forms.py", line 185, in is_valid
+    return self.is_bound and not self.errors
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\forms\forms.py", line 180, in errors
+    self.full_clean()
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\forms\forms.py", line 382, in full_clean
+    self._clean_form()
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\forms\forms.py", line 409, in _clean_form
+    cleaned_data = self.clean()
+  File "C:\Users\sos13\OneDrive\바탕 화면\project1-master\project1-master\FOCUS\project\users\forms.py", line 42, in clean
+    user = User.objects.get(user_id=user_id)
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 393, in get
+    num = len(clone)
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 250, in __len__
+    self._fetch_all()
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 1186, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 54, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 1065, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\sos13\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\backends\sqlite3\base.py", line 298, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: 회원목록
+[2020-11-30 15:01:37] ERROR [django.server:154] "POST /users/login/ HTTP/1.1" 500 187644
